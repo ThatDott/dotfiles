@@ -1,0 +1,143 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+@font-face {
+  font-family: "Lekton Nerd Font";
+  src: url("./LektonNerdFont-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  color: rgba(25, 25, 25, 0.95);
+  margin-right: 7px;
+}
+
+body {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Lekton Nerd Font", ui-monospace, monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  border-bottom: 0px solid rgb(255 255 255 / 5%);
+  //background: linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 65%));
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 0 2vw;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 5px 20px;
+  width: fit-content;
+  height: 25px;
+}
+
+.center {
+  justify-self: center;
+  font-weight: bold;
+  color: rgba(65, 65, 65, 0.95);
+}
+
+.right {
+  justify-self: end;
+}
+
+.user,
+.logo,
+.binding-mode,
+.tiling-direction,
+.paused-button,
+.network,
+.memory,
+.cpu,
+.battery {
+  margin-right: 25px;
+}
+
+.user > a{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  background: rgb(255 255 255 / 0%);
+  margin-right: 6px;
+  padding: 3px 10px;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &.focused,
+  &:hover,
+  &.displayed {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.2);
+  }
+}
+
+.binding-mode,
+.tiling-direction,
+.paused-button {
+  background: rgb(255 255 255 / 0%);
+  color: rgb(255 255 255 / 90%);
+  border-radius: 2px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: #900029;
+}
+
+.battery {
+  position: relative;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+}
