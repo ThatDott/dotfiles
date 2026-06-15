@@ -5,6 +5,18 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#FFD43B",
+          "template": "󰞀 "
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#FFD43B",
+          "template": "🐍{{ .Venv }} "
+        },
+        {
           "foreground": "#ffffff",
           "properties": {
             "style": "full"
@@ -13,17 +25,17 @@
           "template": "{{ .Path }} ",
           "type": "path"
         },
-        {
-          "foreground": "#C2C206",
-          "style": "plain",
+	{
+	  "foreground": "#FFD43B",
+	  "style": "plain",
           "template": "{{ .HEAD }} ",
           "type": "git"
         },
         {
-          "foreground": "#B5B50D",
+          "foreground": "#FFD43B",
           "style": "plain",
-          "template": " \uf0e7 ",
-          "type": "root"
+          "template": "",
+          "type": "text"
         },
         {
           "foreground": "#C94A16",
@@ -39,7 +51,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#007ACC",
+          "foreground": "#FFFFFF",
           "style": "plain",
           "template": "\ue602",
           "type": "text"
